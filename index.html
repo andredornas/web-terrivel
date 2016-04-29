@@ -1,0 +1,69 @@
+<html>
+  <head>
+    <title>Formulário</title>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <style>
+      #container{
+        display: block;
+        border: 1px solid;
+        width: 400px;
+        padding: 15px;
+        margin: 100px auto;
+      }
+      input[type="text"]{
+        width: 100%;
+      }
+      button.btn{
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <section id="container">
+      <form id="formulario" action="http://terrivel.herokuapp.com/monster" method="GET" role="form">
+        <div class="form-group">
+          <label for="num_pedras">Número de pedras</label>
+          <input id="num_pedras" name="num_pedras" type="number" min="0" step="1"/>
+        </div>
+        <div class="form-group">
+          <label for="tam_pedras">Tamanho das pedras</label>
+          <input id="tam_pedras" name="tam_pedras" type=number min="1" max="7" step="0.5" value="3"/>
+        </div>
+        <div class="form-group">
+          <label for="nome">Nome</label>
+          <input id="nome" name="nome" type="text" pattern="[a-z|A-Z|\s]+"/>
+        </div>
+        <div class="form-group">
+          <label for="cor1">Cor Do céu 1:</label>
+          <input id="cor1" type="color" name="corCeu1" value="#6481E5"/>
+        </div>
+        <div class="form-group">
+          <label for="cor2">Cor Do céu 2:</label>
+          <input id="cor2" type="color" name="corCeu2" value="#8AB3E2"/>
+        </div>
+        <div class="form-group">
+          <label for="tipo_pedras">Tipo de Pedra</label>
+          <select id="tipo_pedras" name="tipo_pedras">
+            <option value="marroada">Marroada</option>
+            <option value="ametista">Ametista</option>
+            <option value="topazio">Topazio</option>
+            <option value="espinela">Espinela</option>
+          </select>
+        </div>
+        <div class="form-group">
+          Pedras Sortidas?
+            <label for="tipo_pedras_sortidas1">Não</label>
+              <input id="tipo_pedras_sortidas1" name="tipo_pedras_sortidas" type="radio" value="não" checked/>
+            <label for="tipo_pedras_sortidas2">Sim</label>
+              <input id="tipo_pedras_sortidas2" name="tipo_pedras_sortidas" type="radio" value="sim"/>
+        </div>
+        <div class="form-group">
+          <button type="submit" class="btn btn-default">SUBMIT</button>
+        </div>
+      </form>
+    </section>
+  </body>
+</html>
