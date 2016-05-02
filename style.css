@@ -1,0 +1,13 @@
+#container{
+  display: block;
+  border: 1px solid;
+  width: 400px;
+  padding: 15px;
+  margin: 100px auto;
+}
+input[type="text"]{
+  width: 100%;
+}
+button.btn{
+  width: 100%;
+}
